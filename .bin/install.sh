@@ -6,10 +6,10 @@ if ! which git > /dev/null; then
   exit 1;
 fi
 
-git clone --bare https://github.com/yvesjans/cfg.git ~/.cfg
+git clone --bare https://github.com/yvesjans/cfg.git $HOME/.cfg
 
 function config {
-   /usr/bin/git --git-dir=~/.cfg/ --work-tree=~ $@
+   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 
 mkdir -p .config-backup
