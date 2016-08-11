@@ -1,6 +1,6 @@
 # Install shell and application dotfiles
 
+Usage:
 ```
-git clone https://github.com/yvesjans/cfg.git $HOME/.cfg
-. $HOME/.cfg/install.sh
+curl -Lks https://raw.githubusercontent.com/yvesjans/cfg/master/.bin/install.sh | /bin/bash
 ```
