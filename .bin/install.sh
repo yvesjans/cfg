@@ -6,10 +6,10 @@ if ! which git > /dev/null; then
   exit 1;
 fi
 
-git clone --bare https://github.com/yvesjans/cfg.git $HOME/.cfg
+git clone --bare https://github.com/yvesjans/cfg.git ~/.cfg
 
 function config {
-   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+   /usr/bin/git --git-dir=~/.cfg/ --work-tree=~ $@
 }
 
 mkdir -p .config-backup
@@ -25,8 +25,8 @@ config config status.showUntrackedFiles no
 
 # Install Vim Plugins
 echo "Installing Vim plugins";
-mkdir ~/vim/bundle;
-cd ~/vim/bundle;
+mkdir ~/.vim/bundle;
+cd ~/.vim/bundle;
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/scrooloose/syntastic.git
