@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function config {
-   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+   /usr/bin/git --git-dir=$HOME/.cfg/dotfiles/ --work-tree=$HOME $@
 }
 
 mkdir -p .config-backup
