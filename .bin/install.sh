@@ -1,7 +1,15 @@
 #!/bin/bash
 
+# Check if Git is installed
+if ! which git > /dev/null; then
+  echo "Install git first";
+  exit 1;
+fi
+
+git clone --bare https://github.com/yvesjans/cfg.git $HOME/.cfg
+
 function config {
-   /usr/bin/git --git-dir=$HOME/.cfg/dotfiles/ --work-tree=$HOME $@
+   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 
 mkdir -p .config-backup
