@@ -19,6 +19,7 @@ set smartindent
 set shiftwidth=2
 filetype on
 au BufNewFile,BufRead *.pp set filetype=ruby
+au BufNewFile,BufRead *.json set filetype=json
 
 "===[ syntax highlighting ]=====================================================
 syntax on
